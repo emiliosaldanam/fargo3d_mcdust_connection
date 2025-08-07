@@ -1,0 +1,200 @@
+==============================
+SUMMARY:
+==============================
+SETUP 'p3diso' of FARGO3D git version 2.0-41-gf3593281-dirty
+Spherical mesh of size 50 x 40 x 10 (20000 cells in total)
+1000 outputs scheduled
+LONGSUMMARY sticky flag not activated: no source file archive
+1 planet
+
+==============================
+COMPILATION OPTION SECTION:
+==============================
+-DBIGMEM -DNFLUIDS=1 -DX -DY -DZ -DSPHERICAL -DISOTHERMAL -DSTOCKHOLM -DVISCOSITY -DPOTENTIAL -DHALFDISK
+Ghost layer sizes: NGHX=0	NGHY=3	NGHZ=3
+
+==============================
+RUNTIME GENERAL SECTION:
+==============================
+Current Working Directory is 
+Command line: ./fargo3d -o outputdir=outputs/half_disk_sim /scratch/saldana/fargo3d/setups/p3diso/p3diso.par 
+Parameter file: /scratch/saldana/fargo3d/setups/p3diso/p3diso.par
+Run on 1 process
+Hosts:
+   Rank 0 on swan01
+
+==============================
+OUTPUT SPECIFIC SECTION:
+==============================
+OUTPUT 1000 at simulation time 3141.59 (2025-7-28 17:07:44)
+
+==============================
+PREPROCESSOR MACROS SECTION:
+==============================
+R0 = (1.0) = 1
+R_MU = (1.0) = 1
+MU0 = (1.0) = 1
+MSTAR = (1.0) = 1
+G = (1.0) = 1
+STEFANK = (5.6705e-5*pow((1.0)/36149835.0,4.0)*pow((1.0)/6.674e-8,-2.5)*pow((1.0)/1.9891e33,-1.5)*pow((1.0)/(5.2*1.49597871e13),-0.5)) = 29895.8
+C0 = (2.99792458e10*sqrt((1.0)/6.674e-8*(1.0)/1.9891e33/(1.0)*(5.2*1.49597871e13))) = 22949
+TCMB = (2.73*((1.0)*(1.0)/(1.0)/(1.0))/(6.674e-8*1.9891e33/(5.2*1.49597871e13)/36149835.0)) = 5.78302e-05
+THRESHOLD_STELLAR_MASS = 0.05*(1.0) = 0.05
+
+==============================
+PARAMETERS SECTION:
+==============================
+   ALPHA	0
+   AMBIPOLARDIFFUSIONCOEFF	0
+   ASPECT	auto
+   ASPECTRATIO	0.05
+   AUTOCOLOR	1
+   BETA	0
+   CFL	0.44
+   CMAP	magma
+   COLORBAR	1
+   COORDINATES	spherical
+   CS	1
+   DAMPINGZONE	1.15
+   DISK	1
+   DT	0.314159265359
+   ECCENTRICITY	0
+   EXCLUDEHILL	0
+   FIELD	gasdens
+   FLARINGINDEX	0.5
+   FRAME	F
+   FUNCARCHFILE	std/func_arch.cfg
+   GAMMA	1.66666667
+   HALLEFFECTCOEFF	0
+   INCLINATION	0
+   INDIRECTTERM	0
+   KILLINGBCCOLATITUDE	-0.2
+   MASSTAPER	0
+   NINTERM	10
+   NOISE	0
+   NSNAP	0
+   NTOT	10001
+   NU	1e-05
+   NX	50
+   NY	40
+   NZ	10
+   OHMICDIFFUSIONCOEFF	0
+   OMEGAFRAME	1
+   OORTA	-0.75
+   ORBITALRADIUS	0
+   OUTPUTDIR	outputs/half_disk_sim/
+   PERIODICY	0
+   PERIODICZ	0
+   PLANETCONFIG	planets/SuperEarth.cfg
+   PLANETMASS	0
+   PLOTLINE	field[-1,:,:]
+   PLOTLOG	0
+   REALTYPE	float64
+   RELEASEDATE	0
+   RELEASERADIUS	0
+   RESONANCE	0.5
+   ROCHESMOOTHING	0
+   SEMIMAJORAXIS	0
+   SETUP	p3diso
+   SIGMA0	0.00063661977237
+   SIGMASLOPE	1
+   SPACING	Lin
+   TAUDAMP	0.3
+   THICKNESSSMOOTHING	0.1
+   VERTICALDAMPING	0
+   VMAX	1
+   VMIN	0
+   VTK	0
+   WRITEBX	0
+   WRITEBY	0
+   WRITEBZ	0
+   WRITEDENSITY	0
+   WRITEDIVERGENCE	0
+   WRITEENERGY	0
+   WRITEENERGYRAD	1
+   WRITETAU	1
+   WRITEVX	0
+   WRITEVY	0
+   WRITEVZ	0
+   XMA	0
+   XMAX	3.14159265358979
+   XMB	0
+   XMC	0
+   XMIN	-3.14159265358979
+   YMA	0
+   YMAX	1.5
+   YMB	0
+   YMC	0
+   YMIN	0.6
+   YMY0	1
+   ZMAX	1.5707963267949
+   ZMIN	1.4207963267949
+*** Input file: /scratch/saldana/fargo3d/setups/p3diso/p3diso.par
+#-----------
+Setup			p3diso
+
+### Disk parameters
+
+AspectRatio     	0.05            Thickness over Radius in the disc
+Sigma0			6.3661977237e-4	Surface Density at r=1
+Nu			1.0e-5		Uniform kinematic viscosity
+SigmaSlope		1.0		Slope of surface
+FlaringIndex		0.5
+
+### Planet parameters
+
+PlanetConfig		planets/SuperEarth.cfg
+ThicknessSmoothing 	0.1		Smoothing parameters in disk thickness
+
+### Numerical method parameters
+
+Disk			YES
+OmegaFrame     		1.0
+Frame			F
+IndirectTerm		No
+
+### Mesh parameters
+
+Nx			50		Azimuthal number of zones 
+Ny               	40		Radial number of zones
+Nz			10		Number of zones in colatitude
+Ymin			0.6		Inner boundary radius
+Ymax			1.5		Outer boundary radius
+Zmin			1.42079632679489661922
+Zmax			1.57079632679489661922
+Xmin			-3.141592653589793
+Xmax			3.141592653589793
+
+### Output control parameters
+
+Ntot			10001		Total number of time steps
+Ninterm	 		10		Time steps between outputs
+DT			0.314159265359	Time step length. 2PI = 1 orbit
+OutputDir		@outputs/p3diso
+
+
+Field 			gasdens
+PlotLine		field[-1,:,:]
+
+#-----------
+
+==============================
+PLANETARY SYSTEM SECTION:
+==============================
+#### (X,Y,Z,VX,VY,VZ,mass)
+#### Planet 0 out of 1
+0.998890162830595	-0.0471005207859982	0	0.0471002849651483	0.998895161580443	0	1e-05
+*** Planetary system config file: planets/SuperEarth.cfg
+#-----------
+###########################################################
+#
+#   Planetary system initial configuration
+#
+# Note: Accretion is the inverse of the accretion
+#       time scale (1.0 for Kley's standard set-up)
+#	Set to 0 to turn accretion off
+###########################################################
+
+# Planet Name 	Distance	Mass	 Accretion	Feels Disk	Feels Others
+SuperEarth  1.0     0.00001  0.0        NO      NO
+#-----------
