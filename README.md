@@ -44,25 +44,29 @@ Or launch the notebook and run all cells.
 
 ---
 
+<pre>
 ## Repository Structure
+
+<code>
 fargo3d_mcdust_connection/
-│
 ├── fargo3d_to_mcdust.py            # Main Python script
-├── fargo3d_to_mcdust.ipynb         # Notebook version of the connection
+├── fargo3d_to_mcdust.ipynb         # Notebook version of the pipeline
 │
-├── example_fargo_simsetups/        # Complete setups for test simulations
+├── example_fargo_simsetups/        # .par and .opt files for test simulations
 │   ├── p3disof/                    # Full disk setup
 │   └── p3diso/                     # Half disk setup
 │
-├── example_fargo_outputs/          # Outputs from FARGO3D simulations
-│   ├── full_disk_examplesim/
-│   └── half_disk_examplesim/
+├── example_fargo_outputs/          # Gas velocity and density outputs from FARGO3D
+│   ├── full_disk_sim/
+│   └── half_disk_sim/
 │
-├── example_mcdust_inputs/          # .inp velocity files ready for mcdust
-│   ├── full_disk_example/
-│   └── half_disk_example/
+├── example_mcdust_inputs/          # .inp velocity files ready for McDust
+│   ├── full_disk_sim.inp
+│   └── half_disk_sim.inp
 │
 └── README.md
+</code>
+</pre>
 
 ---
 
@@ -90,7 +94,7 @@ None
 ---
 
 ## Author
-Emilio Saldaña Markus
+Emilio Saldaña Markus:
 Max Planck Institute for Solar System Research - Planetary Science Department - Planetary Formation Group
 University of Texas at Austin - College of Natural Sciences - Physics Department
 
