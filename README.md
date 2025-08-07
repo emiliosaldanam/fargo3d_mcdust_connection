@@ -50,17 +50,17 @@ Or launch the notebook and run all cells.
 <code>
 fargo3d_mcdust_connection/
 ├── fargo3d_to_mcdust.py            # Main Python script
-├── fargo3d_to_mcdust.ipynb         # Notebook version of the pipeline
+├── fargo3d_to_mcdust.ipynb         # Notebook version of the connection
 │
-├── example_fargo_simsetups/        # .par and .opt files for test simulations
+├── example_fargo_simsetups/        # Complete setups for test simulations
 │   ├── p3disof/                    # Full disk setup
 │   └── p3diso/                     # Half disk setup
 │
-├── example_fargo_outputs/          # Gas velocity and density outputs from FARGO3D
+├── example_fargo_outputs/          # FARGO3D simulation outputs
 │   ├── full_disk_sim/
 │   └── half_disk_sim/
 │
-├── example_mcdust_inputs/          # .inp velocity files ready for McDust
+├── example_mcdust_inputs/          # input files for mcdust simulations
 │   ├── full_disk_sim.inp
 │   └── half_disk_sim.inp
 │
